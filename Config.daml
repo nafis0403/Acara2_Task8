@@ -1,0 +1,42 @@
+﻿<ArcGIS defaultAssembly="ConstructionTool.dll" defaultNamespace="ConstructionTool" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{7a82488b-9124-496b-a88b-13e4b6f2ea74}" version="1.0" desktopVersion="2.8.29751">
+    <Name>ConstructionTool</Name>
+    <Description>ConstructionTool description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>azkaa</Author>
+    <Company>Acme</Company>
+    <Date>2/26/2024 4:21:41 PM</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="ConstructionTool_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <!--<tab id="ConstructionTool_Tab1" caption="New Tab">
+          <group refID="ConstructionTool_Group1"/>
+        </tab>-->
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="ConstructionTool_Group1" caption="Group 1" appearsOnAddInTab="true">
+          <!-- host controls within groups -->
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+		   <tool id="ConstructionTool_BufferPolygonTool"
+       categoryRefID="esri_editing_construction_polygon"
+       caption="Create Buffer Polygon"
+       className="BufferPolygonTool"
+       loadOnClick="true"
+       smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonRed16.png"
+       largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonRed32.png">
+     <tooltip heading="Create Buffer Polygon"> Create polygon with a buffer distance.<disabledText /></tooltip>
+ </tool>
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>
